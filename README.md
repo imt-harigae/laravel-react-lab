@@ -90,7 +90,7 @@ DB_CONNECTION=sqlite
 DB_CONNECTION=mysql
 DB_HOST=db
 DB_PORT=3306
-DB_DATABASE=react_app
+DB_DATABASE=laravel_react_lab
 DB_USERNAME=root
 DB_PASSWORD=root
 ```

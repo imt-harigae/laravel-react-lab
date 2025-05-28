@@ -1,0 +1,55 @@
+# ================================
+# OS / エディタ関連
+# ================================
+.DS_Store
+Thumbs.db
+
+# IDE / エディタ
+/.idea
+/.vscode
+/.fleet
+/.phpactor.json
+/.phpunit.cache
+/.phpunit.result.cache
+/.nova
+/.zed
+
+# ================================
+# Laravel 環境変数・構成ファイル
+# ================================
+.env
+.env.*
+!.env.example
+auth.json
+Homestead.json
+Homestead.yaml
+
+# ================================
+# Laravel アプリケーション生成物
+# ================================
+/vendor
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/storage/telescope
+/bootstrap/cache/*.php
+/public/mix-manifest.json
+
+# SQLite DB（使用する場合）
+*.sqlite
+*.sqlite3
+
+# ================================
+# ログ・デバッグ
+# ================================
+*.log
+npm-debug.log
+yarn-error.log
+
+# ================================
+# その他
+# ================================
+phpunit.result.cache
