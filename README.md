@@ -10,8 +10,6 @@
 - Nginx（Webサーバー）
 - Docker / docker-compose（ローカル開発環境）
 
----
-
 ## 📦 ディレクトリ構成
 
 ```
@@ -46,8 +44,23 @@ laravel-react-lab/
 - MySQL 8.0.42
 - Nginx 1.27.5
 
-## 初回構築手順
+## 🛠️ 初回構築手順
+Makefileを使用して構築
+```
+make setup
+```
 
+## 💻 動作確認
+Laravel アプリの表示確認
+- http://localhost
+
+React (Vite) アプリの表示確認
+- http://localhost:5173
+
+API 動作確認
+- http://localhost/api/test
+
+## ⚠️ 以下手順は構築時の参考手順 / 作業不要
 1. docker-compose.ymlを元にDockerイメージをビルド
 
 ```
@@ -128,13 +141,3 @@ Route::get('/test', function () {
     );
 });
 ```
-
-## 動作確認
-Laravel アプリの表示確認
-- http://localhost
-
-React (Vite) アプリの表示確認
-- http://localhost:5173
-
-API 動作確認
-- http://localhost/api/test
