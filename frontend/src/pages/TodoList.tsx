@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import '../App.css';
+import Modal from '../components/Modal';
+import EditTodoForm from '../components/EditTodoForm';
 
 // API URL
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
@@ -21,6 +23,9 @@ export default function TodoList() {
   const [todos, setTodos] = useState<Todo[]>([]);
   const [newTodo, setNewTodo] = useState<{ title: string; description: string }>({ title: '', description: '' });
   const [errors, setErrors] = useState<{ [key: string]: string[] }>({});
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedTodoId, setEditingTodoId] = useState<number | null>(null);
 
   // Todo 一覧取得
   const getTodos = useCallback(() => {
@@ -90,6 +95,11 @@ export default function TodoList() {
         .then(getTodos)
         .catch(console.error);
     }
+  };
+
+  const openEditModal = (id: number) => {
+    setEditingTodoId(id);
+    setIsModalOpen(true);
   };
 
   useEffect(() => {
@@ -166,14 +176,25 @@ export default function TodoList() {
             </div>
 
             <div className="todo-actions">
-              <Link to={`/edit/${todo.id}`}>
+              {/* <Link to={`/edit/${todo.id}`}>
                 <button className="btn-secondary">✏️ 編集</button>
-              </Link>
+              </Link> */}
+              <button className="btn-secondary" onClick={() => openEditModal(todo.id)}>✏️ 編集</button>
               <button className="btn-secondary" onClick={() => deleteTodo(todo.id)}>🗑️ 削除</button>
             </div>
           </li>
         ))}
       </ul>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        {selectedTodoId && (
+          <EditTodoForm
+            todoId={selectedTodoId}
+            onClose={() => setIsModalOpen(false)}
+            onUpdated={getTodos}
+          />
+        )}
+      </Modal>
     </div>
   );
 }
