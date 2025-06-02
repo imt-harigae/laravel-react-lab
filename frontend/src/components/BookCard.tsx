@@ -11,7 +11,7 @@ type Props = {
 export const BookCard: React.FC<Props> = ({ title, image, onClick }) => {
   return (
     <motion.div
-      className="bg-white shadow-md rounded-xl overflow-hidden cursor-pointer w-full aspect-[3/4]" // ← サイズを柔軟に
+      className="bg-white shadow-md rounded-xl overflow-hidden cursor-pointer w-full aspect-[3/4]"
       whileHover={{ scale: 1.05 }}
       onClick={onClick}
     >

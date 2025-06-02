@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import Home from './pages/Home';
 import TodoList from './pages/TodoList';
 import TodoEdit from './pages/TodoEdit';
 import Tailwind from './pages/Tailwind';
@@ -10,10 +11,18 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<BookList />} />
-          <Route path="/edit/:id" element={<TodoEdit />} />
-          <Route path="/tailwind" element={<Tailwind />} />
+          {/* Home */}
+          <Route path="/" element={<Home />} />
+
+          {/* Todo */}
           <Route path="/todos" element={<TodoList />} />
+          <Route path="/edit/:id" element={<TodoEdit />} />
+
+          {/* Book */}
+          <Route path="/books" element={<BookList />} />
+
+          {/* Tailwind */}
+          <Route path="/tailwind" element={<Tailwind />} />
         </Routes>
       </Layout>
     </Router>
