@@ -1,3 +1,4 @@
+// src/App.tsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
@@ -6,7 +7,7 @@ import TodoEdit from './pages/TodoEdit';
 import Tailwind from './pages/Tailwind';
 import BookList from './pages/BookList';
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Layout>
@@ -28,5 +29,3 @@ function App() {
     </Router>
   );
 }
-
-export default App;

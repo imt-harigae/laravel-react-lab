@@ -1,13 +1,15 @@
+// src/data/books.ts
+// TODO: DBから取得する
 const books = [
     {
-      title: "React入門",
-      image: "https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920",
-      description: "Reactについての基本から応用までを解説します。",
+        title: "React入門",
+        image: "https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzU1NjM5NA&ixlib=rb-1.2.1&q=75&w=1920",
+        description: "Reactについての基本から応用までを解説します。",
     },
     {
-      title: "Laravel実践",
-      image: "https://images.unsplash.com/photo-1617128734662-66da6c1d3505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzc3NTM3MA&ixlib=rb-1.2.1&q=75&w=1920",
-      description: "Laravelフレームワークを使った実践的な開発手法。",
+        title: "Laravel実践",
+        image: "https://images.unsplash.com/photo-1617128734662-66da6c1d3505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzc3NTM3MA&ixlib=rb-1.2.1&q=75&w=1920",
+        description: "Laravelフレームワークを使った実践的な開発手法。",
     },
     {
         title: "TypeScript入門",
