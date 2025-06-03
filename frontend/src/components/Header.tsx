@@ -6,6 +6,7 @@ const navItems = [
     { to: '/', label: 'ホーム' },
     { to: '/todos', label: 'Todo' },
     { to: '/books', label: 'Book' },
+    { to: '/builder', label: 'Builder' },
     { to: '/tailwind', label: 'Tailwind確認' },
 ];
 

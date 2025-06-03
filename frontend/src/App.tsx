@@ -6,6 +6,7 @@ import TodoList from './pages/TodoList';
 import TodoEdit from './pages/TodoEdit';
 import Tailwind from './pages/Tailwind';
 import BookList from './pages/BookList';
+import BuilderPage from './pages/BuilderPage';
 
 export default function App() {
   return (
@@ -24,6 +25,9 @@ export default function App() {
 
           {/* Tailwind */}
           <Route path="/tailwind" element={<Tailwind />} />
+
+          {/* Builder */}
+          <Route path="/builder" element={<BuilderPage />} />
         </Routes>
       </Layout>
     </Router>
