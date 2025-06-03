@@ -52,3 +52,7 @@ clear:
 	docker compose exec backend php artisan config:clear
 	docker compose exec backend php artisan route:clear
 	docker compose exec backend php artisan view:clear
+
+# 11. キャッシュのクリア
+optimize:
+	docker compose exec backend php artisan optimize
