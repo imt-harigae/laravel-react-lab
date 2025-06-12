@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../App.css';
+import '../css/todo.css';
 
 // API URL
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;

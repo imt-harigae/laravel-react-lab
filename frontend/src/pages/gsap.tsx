@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import Slider from "../components/ui/Slider";
 import TextSlider from "../components/ui/TextSlider";
+import AnimatedGrid from "../components/ui/AnimatedGrid";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { animateOnScroll } from "../utils/gsapAnimations";
@@ -48,7 +49,6 @@ export default function App() {
     }
   }, []);
 
-
   return (
     <div className="container">
       {/* 1つ目のセクション */}
@@ -57,29 +57,27 @@ export default function App() {
           {/* タイトル */}
           <div className="slider-text" ref={titleRef}>
             <TextSlider
-              text="Let us be a PIECE of your journey. Let us be a PIECE of your journey. "
+              text="The only way to do great work is to love what you do. If you haven’t found it yet, keep looking. Don’t settle. As with all matters of the heart, you’ll know when you find it."
               direction="left"
-              speed={0.7}
+              speed={0.5}
               fontSize="10rem"
             />
           </div>
 
           <div className="slider-text-wrapper">
-            <Slider images={images} />
+            <Slider images={images} direction="left" speed={0.5} shape="square" />
           </div>
         </div>
 
         {/* サブタイトル */}
         <div className="slider-subtitle-wrapper" ref={subtitleRef}>
           <p className="slider-subtitle">
-            インスピレーションを与え、人々をつなげる特別な体験を
+            心が動くまで、歩みを止めないこと。
           </p>
         </div>
       </section>
       <section className="about">
-      <div ref={aboutRef}>
-        <img src="https://images.unsplash.com/photo-1617478755490-e21232a5eeaf?crop=entropy&cs=srgb&fm=jpg" alt="" />
-      </div>
+        <AnimatedGrid size="60px"/>
       </section>
     </div>
   );

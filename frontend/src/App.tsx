@@ -9,6 +9,7 @@ import BookList from './pages/BookList';
 import BuilderPage from './pages/Builder';
 import HTML from './pages/index';
 import GSAP from './pages/Gsap';
+import "./App.css";
 
 export default function App() {
   return (

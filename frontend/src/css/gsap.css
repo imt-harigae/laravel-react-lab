@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 40px 0;
   overflow: hidden;
-  background-color: #f6e1c1;
 }
 
 .hero {
@@ -40,13 +39,12 @@
 .slider-subtitle {
   padding-right: 2rem;
   font-size: 2rem;
-  color: #000;
+  color: #ffffff;
   font-weight: bold;
 }
 
 .about {
   padding: 6rem 2rem;
-  background: #fff;
   text-align: center;
   height: 100vh;
 }
@@ -64,4 +62,14 @@
   position: absolute;
   background-size: 500px 300px;
   background-repeat: no-repeat;
+}
+
+.rect {
+  display: block;
+  background: rgb(176, 37, 37);
+  position: relative;
+}
+
+h1 {
+  font-size: 16px;
 }

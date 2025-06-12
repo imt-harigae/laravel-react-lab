@@ -6,6 +6,7 @@ interface TextSliderProps {
   speed?: number;
   direction?: "left" | "right";
   fontSize?: string;
+  color?: string;
 }
 
 export default function TextSlider({
@@ -13,6 +14,7 @@ export default function TextSlider({
   speed = 0.5,
   direction = "left",
   fontSize = "2rem",
+  color = "#ffffff",
 }: TextSliderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const posRef = useRef(0);
@@ -59,6 +61,7 @@ export default function TextSlider({
           whiteSpace: "nowrap",
           fontSize,
           paddingRight: "2rem",
+          color: color,
         }}
       >
         {text}

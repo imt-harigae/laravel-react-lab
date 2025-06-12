@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import '../App.css';
+import '../css/todo.css';
 
 // API URL
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
@@ -124,7 +125,7 @@ export default function TodoEdit() {
 
                 <div className="form-actions">
                     <button className="btn-primary" onClick={updateTodo}>💾 保存</button>
-                    <button className="btn-secondary" onClick={() => navigate('/')}>戻る</button>
+                    <button className="btn-secondary" onClick={() => navigate('/todos')}>戻る</button>
                 </div>
             </section>
         </div>
