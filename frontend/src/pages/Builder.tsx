@@ -2,8 +2,8 @@ import { useState, useRef } from "react";
 import { DndContext } from "@dnd-kit/core";
 import type { DragEndEvent, UniqueIdentifier } from "@dnd-kit/core";
 
-import PaletteItem from "../components/PaletteItem";
-import Canvas from "../components/Canvas";
+import PaletteItem from "../components/builder/PaletteItem";
+import Canvas from "../components/builder/Canvas";
 
 const paletteItems = [
   { id: "section", label: "Section" },

@@ -8,6 +8,8 @@ const navItems = [
     { to: '/books', label: 'Book' },
     { to: '/builder', label: 'Builder' },
     { to: '/tailwind', label: 'Tailwind確認' },
+    { to: '/gsap', label: 'GSAP' },
+    { to: '/html', label: 'HTML' },
 ];
 
 const navLinkClass = (isActive: boolean) =>

@@ -1,0 +1,52 @@
+.hero-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+  overflow: hidden;
+  background-color: #f6e1c1;
+}
+
+.image-slider-section {
+  position: relative;
+  width: 100%;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2; /* スライダーの上に表示 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  pointer-events: none; /* クリックを通過させる */
+}
+
+.main-headline {
+  font-size: 12rem;
+  color: white;
+  white-space: nowrap;
+}
+
+.sub-message {
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #000;
+  font-weight: bold;
+  text-shadow: none;
+}
+
+.slider-display-area {
+  position: relative;
+  z-index: 1; /* 背景画像スライダー */
+}
+
+.fullscreen-about {
+  padding: 6rem 2rem;
+  background: #fff;
+  text-align: center;
+}

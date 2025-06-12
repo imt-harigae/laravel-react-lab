@@ -2,8 +2,8 @@
 import { DndContext } from '@dnd-kit/core';
 import type { DragEndEvent } from '@dnd-kit/core';
 import { useState } from 'react';
-import { ColorSwatch } from '../components/Tailwind/ColorSwatch';
-import { ColorTarget } from '../components/Tailwind/ColorTarget';
+import { ColorSwatch } from '../components/tailwind/ColorSwatch';
+import { ColorTarget } from '../components/tailwind/ColorTarget';
 import { colorMap } from '../constants/colorMap';
 
 export default function TailwindPage() {

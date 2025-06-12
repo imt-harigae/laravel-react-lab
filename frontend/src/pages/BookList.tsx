@@ -1,7 +1,7 @@
 // src/pages/BookList.tsx
 import { useState } from "react"
-import { BookCard } from "../components/BookCard"
-import { BookDetailModal } from "../components/BookDetailModal"
+import { BookCard } from "../components/book/BookCard"
+import { BookDetailModal } from "../components/book/BookDetailModal"
 import books from "../data/books"
 
 export default function BookList() {
