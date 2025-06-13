@@ -1,20 +1,20 @@
 import { useEffect, useRef } from "react";
 
-interface Props {
+interface ImageSliderProps {
   images: string[];
-  size?: number; // default: 700
-  shape?: "circle" | "square"; // default: circle
-  direction?: "left" | "right"; // default: left
-  speed?: number; // default: 0.5
+  size?: number;
+  shape?: "circle" | "square";
+  direction?: "left" | "right";
+  speed?: number;
 }
 
-export default function Slider({
+export default function ImageSlider({
   images,
-  size = 700,
-  shape = "circle",
-  direction = "left",
-  speed = 0.5,
-}: Props) {
+  size = 700, // 画像のサイズ
+  shape = "circle", // 画像の形状
+  direction = "left", // スクロール方向
+  speed = 0.5, // スクロール速度
+}: ImageSliderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const posRef = useRef(0);
 
@@ -28,12 +28,12 @@ export default function Slider({
       const maxScroll = container.scrollWidth / 2;
 
       // スクロール方向に応じて調整
-      posRef.current += direction === "left" ? -speed : speed;
+      posRef.current += direction === "right" ? -speed : speed;
 
-      if (direction === "left" && posRef.current <= 0) {
+      if (direction === "right" && posRef.current <= 0) {
         posRef.current = maxScroll;
       }
-      if (direction === "right" && posRef.current >= maxScroll) {
+      if (direction === "left" && posRef.current >= maxScroll) {
         posRef.current = 0;
       }
 
@@ -43,6 +43,11 @@ export default function Slider({
     };
 
     animationFrameId = requestAnimationFrame(step);
+
+    // 30秒後に自動停止
+    setTimeout(() => {
+      cancelAnimationFrame(animationFrameId);
+    }, 30000);
 
     return () => cancelAnimationFrame(animationFrameId);
   }, [direction]);

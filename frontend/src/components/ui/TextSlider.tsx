@@ -11,10 +11,10 @@ interface TextSliderProps {
 
 export default function TextSlider({
   text,
-  speed = 0.5,
-  direction = "left",
-  fontSize = "2rem",
-  color = "#ffffff",
+  speed = 0.5, // スクロール速度
+  direction = "left", // スクロール方向
+  fontSize = "2rem", // フォントサイズ
+  color = "#ffffff", // テキスト色
 }: TextSliderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const posRef = useRef(0);
@@ -28,14 +28,14 @@ export default function TextSlider({
 
       const maxScroll = container.scrollWidth / 2;
 
-      posRef.current += direction === "left" ? speed : -speed;
+      posRef.current += direction === "right" ? -speed : speed;
 
-      if (direction === "left" && posRef.current >= maxScroll) {
-        posRef.current = 0;
-      } else if (direction === "right" && posRef.current <= 0) {
+      if (direction === "right" && posRef.current <= 0) {
         posRef.current = maxScroll;
       }
-
+      if (direction === "left" && posRef.current >= maxScroll) {
+        posRef.current = 0;
+      }
       container.scrollLeft = posRef.current;
 
       animationFrameId = requestAnimationFrame(step);
@@ -43,8 +43,13 @@ export default function TextSlider({
 
     animationFrameId = requestAnimationFrame(step);
 
+    // 30秒後に自動停止
+    setTimeout(() => {
+      cancelAnimationFrame(animationFrameId);
+    }, 30000);
+
     return () => cancelAnimationFrame(animationFrameId);
-  }, [direction, speed]);
+  }, [direction]);
 
   return (
     <div

@@ -9,6 +9,7 @@ import BookList from './pages/BookList';
 import BuilderPage from './pages/Builder';
 import HTML from './pages/index';
 import GSAP from './pages/Gsap';
+import Gallery from './pages/Gsap/Gallery';
 import "./App.css";
 
 export default function App() {
@@ -37,6 +38,7 @@ export default function App() {
 
           {/* GSAP */}
           <Route path="/gsap" element={<GSAP />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </Layout>
     </Router>

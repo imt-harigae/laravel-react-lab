@@ -1,4 +1,4 @@
-import Slider from "../components/ui/Slider";
+import Slider from "../components/ui/ImageSlider";
 import "../css/index.css";
 
 export default function App() {
